@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     environment {
-        PIPELINE_REF = "${currentBuild.dump()}"
+        PIPELINE_REF = "${rhtap.env().pipeline_path}"
     }
 
     stages {
