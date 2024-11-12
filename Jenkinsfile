@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PIPELINE_REF = "${new groovy.json.JsonBuilder(currentBuild).toPrettyString()}"
+        PIPELINE_REF = "${currentBuild.dump()}"
     }
 
     stages {
