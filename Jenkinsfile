@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PIPELINE_REF = "${currentBuild}"
+        PIPELINE_REF = "${currentBuild.buildCauses}"
     }
 
     stages {
