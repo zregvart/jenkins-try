@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PIPELINE_REF = "${rhtap.env().pipeline_path}"
+        PIPELINE_PATH = "${rhtap.env().pipeline_path}"
+        PIPELINE_REV = "${rhtap.env().pipeline_rev}"
     }
 
     stages {
